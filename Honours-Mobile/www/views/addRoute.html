@@ -1,0 +1,16 @@
+﻿<div class="input-group">
+    <input type="text" class="form-control" aria-label="..." ng-model="uid">
+    <div class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="retrieveUID(uid)">Retrieve!</button>
+    </div>
+</div>
+
+<uib-accordion close-others="false">
+    <div uib-accordion-group class="panel-default" heading="{{route.name}}" ng-repeat="route in retrievedRoute">
+        <div uib-accordion-group class="panel-default" heading="{{place.data.name}}" ng-repeat="place in route.places">
+           {{place.data.address}} 
+        </div>
+    </div>
+</uib-accordion>
+
+<button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false" ng-click="saveRoute()">Save</button>

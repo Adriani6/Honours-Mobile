@@ -1,0 +1,37 @@
+html, body
+{
+    min-height: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    top: 0;
+    padding: 0;
+    background: #58bcd4;
+}
+
+#tileGrid
+{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+
+.tile {
+  display: inline-block;
+  box-sizing: border-box;
+  background: inherit;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid white;
+  min-width: 100%;
+}
+.tile .title {
+  margin-top: 0px;
+  font-size: 64px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
