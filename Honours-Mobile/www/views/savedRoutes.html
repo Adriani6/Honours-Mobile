@@ -1,1 +1,12 @@
-﻿<div>{{routes}}</div>
+﻿<h3>Your saved routes</h3>
+<a href="#/view_route_details/{{$index}}" ng-repeat="r in routes track by $index">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-2">{{$index}}</div>
+            <div class="col-xs-8" style="text-overflow: ellipsis;">{{r}}</div>
+            <div class="col-xs-2">
+                <span class="fa fa-chevron-right"></span>
+            </div>
+        </div>
+    </div>
+</a>

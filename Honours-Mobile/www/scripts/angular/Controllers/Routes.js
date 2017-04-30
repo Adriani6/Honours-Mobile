@@ -1,7 +1,22 @@
 ﻿app.controller("Routes", function ($scope, Routes)
 {
+    $scope.routes = [];
+
     Routes.loadFile(function (data) {
-        $scope.routes = data;
+       
+        for (var i = 0; i < data.length; i++)
+        {
+            if (data[i] != undefined)
+            {
+                if(data[i].name != undefined)
+                {
+                    $scope.routes.push(data[i].name);
+                }
+            }
+            
+        }
+
+
     });
 
     $scope.retrievedRoute = [];
